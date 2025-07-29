@@ -5,6 +5,13 @@ A RESTful backend service for handling sensor data — built using **Golang**, *
 
 ---
 
+## 🧪 Postman Collection
+👉 Import the Postman collection to test the API easily:
+
+📎 [Postman Collection Link](https://harshit-6003987.postman.co/workspace/harshit's-Workspace~bb3b2062-7320-454a-8fde-febd3854d040/collection/43825972-a3649ef1-5cd6-455c-9ae9-8c934ad90d58?action=share&creator=43825972)
+
+---
+
 ## 🚀 Features
 
 - Insert new sensor data
