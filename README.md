@@ -14,7 +14,7 @@ A RESTful backend service for handling sensor data — built using **Golang**, *
 
 ## 🚀 Features
 
-- Insert new sensor data
+- Insert auto new sensor data
 - Retrieve filtered sensor records
 - Fetch latest sensor entries
 - Update existing sensor data
@@ -39,11 +39,13 @@ A RESTful backend service for handling sensor data — built using **Golang**, *
 ```bash
 sensor-server/
 ├── db/               # Database connection (InitDB)
-│   └── db.go
+│   └── mysql.go
+├── handlers/           # Route handlers
+│   └── sensor.go
 ├── models/           # Sensor data model
 │   └── sensor.go
-├── routes/           # Route handlers
-│   └── handlers.go
+├── simulate/           # Auto-Generated Sensor Data
+│   └── generatoe.go
 ├── main.go           # Entry point
 ├── go.mod / go.sum   # Dependencies
 ├── .env              # Environment variables (NOT COMMITTED)
