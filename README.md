@@ -54,16 +54,27 @@ sensor-server/
 
 ## 🧪 API Endpoints
 
-### 📥 Insert Sensor Data
+### 📥 Auto-Generated Sensor Data
 
-`POST /insert`
+To simulate live sensor input, an auto-generator Go script is provided. This script continuously sends random sensor data to the backend every second.
+
+`POST /data`
 
 ```json
 {
   "sensor_value": 85,
   "id1": 1,
-  "id2": "A"
+  "id2": "A",
+  "timestamp": "2025-07-29T18:30:00Z"
 }
+```
+
+### ▶️ How to Use
+
+Run the auto-generator to simulate live sensor data:
+
+```bash
+   go run simulate/generator.go   
 ```
 
 ---
@@ -78,14 +89,14 @@ Returns records based on optional filters.
 
 ### 🕓 Get Latest N Records
 
-`GET /latest?limit=5`  
+`GET /data/latest?limit=5`  
 Default limit is `5` if not provided.
 
 ---
 
 ### ✏️ Update Sensor Data
 
-`PUT /update?id2=A`
+`PUT /data?id2=A`
 
 ```json
 {
@@ -98,13 +109,13 @@ Default limit is `5` if not provided.
 
 ### 🗑️ Delete Sensor Data
 
-`DELETE /delete?id2=A`
+`DELETE /data?id2=A`
 
 ---
 
 ### 📊 Get Statistics
 
-`GET /stats?start=unix&end=unix`
+`GET /data/stats?start=unix&end=unix`
 
 Returns: count, average, min, max sensor values.
 
