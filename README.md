@@ -154,11 +154,17 @@ go run main.go
 ## 📝 Example MySQL Table
 
 ```sql
+CREATE DATABASE sensordb;
+
+USE sensordb;
+
 CREATE TABLE sensor_data (
+  id INT AUTO_INCREMENT PRIMARY KEY,
   sensor_value INT,
   id1 INT,
   id2 VARCHAR(10),
   timestamp DATETIME
 );
+
 ```
 
