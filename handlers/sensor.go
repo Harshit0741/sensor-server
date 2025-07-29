@@ -132,7 +132,7 @@ func GetGrouped(c echo.Context) error {
 		})
 	}
 
-	query := fmt.Sprintf("SELECT %s AS grouped, COUNT(*) AS total FROM sensor_data GROUP BY %s", groupBy, groupBy) // already sent here in fmt.Sprintf
+	query := fmt.Sprintf("SELECT %s AS grouped, COUNT(*) AS total FROM sensor_data GROUP BY %s", groupBy, groupBy)
 	rows, err := db.DB.Query(query)
 	if err != nil {
 		return c.JSON(http.StatusInternalServerError, echo.Map{"error": "falied to retrive data from db"})
